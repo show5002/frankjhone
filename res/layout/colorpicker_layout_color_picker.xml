@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/colorView" android:background="@color/darkModeBackground" android:layout_width="fill_parent" android:layout_height="200.0dip" android:elevation="2.0dip">
+        <androidx.appcompat.widget.SwitchCompat android:textColor="@color/darkModeText" android:layout_gravity="center|right|top" android:id="@id/colorViewDarkModeSwitch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:checked="true" android:text="Preview in dark mode" />
+        <LinearLayout android:layout_gravity="center|left" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/almostBlack" android:id="@id/colorViewText1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ceono" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/darkModeText" android:id="@id/colorViewTextMessage1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=": This is a message" android:layout_toRightOf="@id/colorViewText1" android:layout_alignBaseline="@id/colorViewText1" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/almostBlack" android:id="@id/colorViewText2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="uJohan" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/darkModeText" android:id="@id/colorViewTextMessage2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=": This is a message" android:layout_toRightOf="@id/colorViewText2" android:layout_alignBaseline="@id/colorViewText2" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/almostBlack" android:id="@id/colorViewText3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Someone" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/darkModeText" android:id="@id/colorViewTextMessage3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=": This is a message" android:layout_toRightOf="@id/colorViewText3" android:layout_alignBaseline="@id/colorViewText3" />
+            </LinearLayout>
+        </LinearLayout>
+        <EditText android:textSize="16.0sp" android:textColor="@color/darkModeText" android:textColorHint="@color/darkModeText" android:layout_gravity="bottom|center|right" android:id="@id/codHex" android:layout_width="65.0dip" android:layout_height="40.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:text="" android:hint="\#" android:maxLines="1" android:password="false" android:singleLine="true" android:imeOptions="actionDone" android:textAllCaps="true" />
+    </FrameLayout>
+    <RelativeLayout android:id="@id/seekBarGroup" android:background="@android:color/white" android:paddingLeft="@dimen/materialcolorpicker__activity_horizontal_margin" android:paddingTop="@dimen/materialcolorpicker__activity_vertical_margin" android:paddingRight="@dimen/materialcolorpicker__activity_horizontal_margin" android:paddingBottom="@dimen/materialcolorpicker__activity_vertical_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="18.0sp" android:textColor="@android:color/holo_red_light" android:id="@id/redToolTip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:fontFamily="sans-serif-medium" />
+        <SeekBar android:id="@id/redSeekBar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="3.0dip" android:max="255" android:progressDrawable="@drawable/colorpicker_red_progress" android:minHeight="3.0dip" android:layout_below="@id/redToolTip" android:thumbTint="@android:color/holo_red_light" />
+        <TextView android:textSize="18.0sp" android:textColor="@android:color/holo_green_light" android:id="@id/greenToolTip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/redSeekBar" android:fontFamily="sans-serif-medium" />
+        <SeekBar android:id="@id/greenSeekBar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="3.0dip" android:max="255" android:progressDrawable="@drawable/colorpicker_green_progress" android:minHeight="3.0dip" android:layout_below="@id/greenToolTip" android:thumbTint="@android:color/holo_green_light" />
+        <TextView android:textSize="18.0sp" android:textColor="@android:color/holo_blue_light" android:id="@id/blueToolTip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/greenSeekBar" android:fontFamily="sans-serif-medium" />
+        <SeekBar android:id="@id/blueSeekBar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="3.0dip" android:max="255" android:progressDrawable="@drawable/colorpicker_blue_progress" android:minHeight="3.0dip" android:layout_below="@id/blueToolTip" android:thumbTint="@android:color/holo_blue_light" />
+    </RelativeLayout>
+    <RelativeLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Switch android:textColor="@color/lightModeText" android:id="@id/useTwitchColors" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="Use Twitch colors" android:layout_alignBaseline="@id/okColorButton" />
+        <Button android:id="@id/okColorButton" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="Save" android:layout_alignParentBottom="false" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Grey">#ff777777</color>
+    <color name="almostBlack">#ffffffff</color>
+    <color name="almostWhite">#ff090909</color>
+    <color name="chatInputBackground">#6cfcfcfc</color>
+    <color name="contextMenuBackground">#ffa0a0a0</color>
+    <color name="settingsButtonColor">#ff000000</color>
+    <color name="textForeground">#ff090909</color>
+</resources>

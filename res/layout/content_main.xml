@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/almostBlack" android:layout_width="fill_parent" android:layout_height="fill_parent" splitview:layout_behavior="@string/appbar_scrolling_view_behavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:splitview="http://schemas.android.com/apk/res-auto">
+    <se.jhnk.irlchat.SplitView android:orientation="vertical" android:id="@id/main_splitview" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" splitview:handle="@id/handle" splitview:primaryContent="@id/eventlist_container" splitview:secondaryContent="@id/chat_container">
+        <LinearLayout android:orientation="vertical" android:id="@id/eventlist_container" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginBottom="-15.0px" android:layout_weight="1.0">
+            <androidx.viewpager.widget.ViewPager android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <se.jhnk.irlchat.CustomTabLayout android:id="@id/browser_source_tablayout" android:layout_width="fill_parent" android:layout_height="wrap_content" splitview:tabGravity="fill" splitview:tabMaxWidth="0.0dip" splitview:tabMode="scrollable" splitview:tabSelectedTextColor="@color/Red" splitview:tabTextColor="@color/colorForeground" />
+            </androidx.viewpager.widget.ViewPager>
+            <TextView android:textColor="@color/almostWhite" android:gravity="center" android:id="@id/text_eventlist" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/browser_sources_empty" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/handle" android:background="#00ffffff" android:layout_width="fill_parent" android:layout_height="60.0px" android:elevation="1.0dip">
+            <FrameLayout android:layout_gravity="center" android:id="@id/handle_box" android:background="@color/almostMoreBlack" android:layout_width="fill_parent" android:layout_height="30.0px">
+                <ImageView android:layout_gravity="center" android:id="@id/handle_image_horizontal" android:background="@drawable/handle_white_rounded" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="10.0px" android:layout_marginLeft="160.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="160.0dip" android:layout_marginBottom="10.0dip" android:elevation="5.0dip" />
+                <ImageView android:layout_gravity="center" android:id="@id/handle_image_vertical" android:background="@drawable/handle_white_rounded" android:visibility="gone" android:layout_width="10.0px" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginTop="100.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="100.0dip" android:elevation="5.0dip" />
+            </FrameLayout>
+        </FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:id="@id/chat_container" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="47.0dip" splitview:layout_constraintBottom_toBottomOf="@id/chat_top">
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="47.0dip" android:layout_weight="1.0" splitview:layout_constraintBottom_toBottomOf="parent" splitview:layout_constraintStart_toStartOf="parent">
+                    <TextView android:textColor="@color/almostWhite" android:gravity="center" android:id="@id/connection_lost_message" android:background="@color/transparentRed" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/chat_connection_lost" />
+                    <androidx.appcompat.widget.AppCompatAutoCompleteTextView android:enabled="true" android:textColor="@color/textForeground" android:textColorHint="@color/colorForeground" android:id="@id/text_chat_input" android:background="@color/chatInputBackground" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:focusableInTouchMode="true" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="47.0dip" android:hint="@string/chat_input_placeholder" android:singleLine="true" android:completionThreshold="1" android:imeOptions="actionSend" android:backgroundTint="@color/colorForeground" splitview:layout_constraintBottom_toBottomOf="@id/chat_top" />
+                    <ImageView android:layout_gravity="end|center" android:id="@id/show_chat_history_button" android:background="@drawable/ic_baseline_history_24" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" android:scaleX="0.5" android:scaleY="0.5" android:backgroundTint="@color/Grey" />
+                </FrameLayout>
+                <FrameLayout android:visibility="visible" android:layout_width="wrap_content" android:layout_height="47.0dip" android:layout_marginRight="0.0px" splitview:layout_constraintBottom_toBottomOf="parent" splitview:layout_constraintRight_toRightOf="@id/text_chat_input">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <ImageView android:layout_width="2.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" splitview:srcCompat="@color/colorForeground" />
+                        <FrameLayout android:id="@id/mute_box" android:background="?android:selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_gravity="center" android:id="@id/mute_button" android:background="@drawable/ic_baseline_volume_up_24" android:layout_width="70.0dip" android:layout_height="47.0dip" android:scaleX="0.3" android:scaleY="0.4" android:backgroundTint="@color/Grey" />
+                        </FrameLayout>
+                        <ImageView android:layout_width="2.0dip" android:layout_height="fill_parent" splitview:srcCompat="@color/colorForeground" />
+                        <FrameLayout android:id="@id/show_settings_box" android:background="?android:selectableItemBackground" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_gravity="center" android:id="@id/show_settings_button" android:background="@drawable/ic_settings_black_24dp" android:layout_width="70.0dip" android:layout_height="47.0dip" android:scaleX="0.3" android:scaleY="0.4" android:backgroundTint="@color/Grey" />
+                        </FrameLayout>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/chat_top" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textColor="@color/almostWhite" android:gravity="center" android:id="@id/text_chat" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/chat_logged_out" />
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/chat_recycleview" android:paddingBottom="15.0px" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="47.0dip" />
+            </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/native_chat_window" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" splitview:layout_constraintStart_toStartOf="parent" splitview:layout_constraintTop_toTopOf="parent">
+                <LinearLayout android:gravity="center_horizontal" android:id="@id/go_to_top" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" splitview:layout_constraintStart_toStartOf="parent" splitview:layout_constraintTop_toTopOf="parent">
+                    <ImageButton android:id="@id/go_to_top_button" android:layout_width="187.0dip" android:layout_height="32.0sp" android:layout_marginTop="20.0px" android:backgroundTint="@color/almostMoreBlack" splitview:srcCompat="@android:drawable/arrow_up_float" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal" android:id="@id/go_to_bottom" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="47.0dip" splitview:layout_constraintBottom_toBottomOf="parent" splitview:layout_constraintStart_toStartOf="parent">
+                    <ImageButton android:id="@id/go_to_bottom_button" android:layout_width="187.0dip" android:layout_height="32.0sp" android:layout_marginBottom="20.0px" android:backgroundTint="@color/almostMoreBlack" splitview:srcCompat="@android:drawable/arrow_down_float" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </se.jhnk.irlchat.SplitView>
+    <FrameLayout android:id="@id/catch_touch_framelayout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

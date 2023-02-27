@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:theme="@style/PreferenceScreen" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <EditText android:id="@id/name_edittext" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:hint="@string/browser_sources_name" android:ems="10" android:importantForAutofill="no">
+            <requestFocus />
+        </EditText>
+        <EditText android:id="@id/value_edittext" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:hint="@string/browser_sources_url" android:minLines="1" android:ems="10" android:importantForAutofill="no" />
+        <androidx.appcompat.widget.SwitchCompat android:id="@id/enabled_source_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:checked="true" android:text="@string/browser_sources_audio_only" />
+        <androidx.appcompat.widget.SwitchCompat android:id="@id/autoreconnect_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="Auto reload on reconnects" />
+        <Button android:layout_gravity="center" android:id="@id/add_record" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/browser_sources_add" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

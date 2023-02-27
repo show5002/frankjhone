@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/timeout" android:title="Timeout" />
+    <item android:id="@id/ban" android:title="Ban" />
+    <item android:id="@id/delete" android:title="Delete" />
+    <item android:id="@id/unban" android:title="Unban" />
+    <item android:id="@id/hide_user" android:title="Hide user this session" />
+    <item android:id="@id/open_user_in_browser" android:title="Open user in browser" />
+    <item android:id="@id/row_number" android:visible="false" />
+</menu>

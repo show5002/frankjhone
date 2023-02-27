@@ -1,0 +1,8 @@
+.channel-leaderboard
+{
+  display: none;
+}
+#root > div > div.tw-full-height > div > div > section > div > div.chat-input.tw-block.tw-pd-b-1.tw-pd-x-1 > div:nth-child(2) > div.tw-block.tw-relative.tw-z-default > div > div:nth-child(2) > div > div > textarea
+{
+    max-height: 40px;
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:theme="@style/AppTheme"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference android:layout="@layout/twitch_login_button" android:key="twitchButton" app:allowDividerBelow="false" app:iconSpaceReserved="false" />
+    <PreferenceCategory android:title="Browser sources" android:key="audio_browser_source_category" app:iconSpaceReserved="false">
+        <Preference android:title="Manage browser sources" android:key="button_manage_browser_sources" android:summary="Long press a tab to refresh it. Long press the cogwheel to refresh all tabs. " app:icon="@drawable/ic_list_black_24dp" />
+        <SeekBarPreference android:max="4" android:summary="(0 = hidden - swipe to change tab)" android:defaultValue="3" app:iconSpaceReserved="false" app:key="tab_height" app:min="1" app:showSeekBarValue="false" app:title="Tab height" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Chat" android:key="chat_category" app:iconSpaceReserved="false">
+        <SeekBarPreference android:max="6" android:defaultValue="3" app:iconSpaceReserved="false" app:key="text_size" app:min="1" app:showSeekBarValue="false" app:title="Text size" />
+        <SeekBarPreference android:max="6" android:defaultValue="3" app:iconSpaceReserved="false" app:key="icon_size" app:min="1" app:showSeekBarValue="false" app:title="Badge/emote size" />
+        <SwitchPreference android:singleLine="true" android:selectAllOnFocus="true" android:title="Keep chat alive in background" android:key="start_as_background_service" app:iconSpaceReserved="false" app:isPreferenceVisible="true" />
+        <SwitchPreference android:singleLine="true" android:selectAllOnFocus="true" android:title="Enable BTTV emotes" android:key="bttv_emotes_enabled" app:iconSpaceReserved="false" app:isPreferenceVisible="true" />
+        <SwitchPreference android:singleLine="true" android:selectAllOnFocus="true" android:title="Enable FFZ emotes" android:key="ffz_emotes_enabled" app:iconSpaceReserved="false" app:isPreferenceVisible="true" />
+        <SwitchPreference android:singleLine="true" android:selectAllOnFocus="true" android:title="Animate emotes" android:key="gif_emotes_enabled" app:iconSpaceReserved="false" app:isPreferenceVisible="true" />
+        <SwitchPreference android:singleLine="true" android:selectAllOnFocus="true" android:title="Reverse message order" android:key="reverse_chat_order" android:summary="Requires restart" app:iconSpaceReserved="false" />
+        <Preference android:title="Username colors" android:key="color_picket_test_key" app:iconSpaceReserved="false" />
+        <SwitchPreference android:singleLine="true" android:selectAllOnFocus="true" android:title="Show viewer counter" android:key="show_view_counter" app:iconSpaceReserved="false" app:isPreferenceVisible="false" />
+        <EditTextPreference android:singleLine="true" android:selectAllOnFocus="true" android:title="Join alternate channel" android:key="join_alt_channel" app:dialogMessage="Enter channel name" app:iconSpaceReserved="false" app:isPreferenceVisible="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Voice" android:key="voice_category" app:iconSpaceReserved="false">
+        <SwitchPreference android:singleLine="true" android:selectAllOnFocus="true" android:title="Text-to-speech chat" android:key="voice_enabled" android:summary="Long press mute-button to skip queued TTS" app:iconSpaceReserved="false" app:isPreferenceVisible="true" />
+        <se.jhnk.irlchat.preferences.TagsEditTextPreference android:singleLine="false" android:selectAllOnFocus="false" android:title="Ignore users" android:key="tts_ignored_users" app:iconSpaceReserved="false" />
+        <EditTextPreference android:hint="!" android:singleLine="true" android:selectAllOnFocus="true" android:title="Ignore command prefix" android:key="tts_ignored_prefix" android:defaultValue="!" app:iconSpaceReserved="false" />
+        <Preference android:title="Open Android text-to-speech settings" android:summary="" app:icon="@drawable/ic_baseline_open_in_new_24">
+            <intent android:action="com.android.settings.TTS_SETTINGS" />
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Integration" android:key="integration_category" app:iconSpaceReserved="false">
+        <SwitchPreference android:title="Enable integrations" android:key="third_party_broadcast" android:summary="Allow third party apps to read new chat messages and channel point redemptions" android:defaultValue="false" app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Other" android:key="other_category" app:iconSpaceReserved="false">
+        <SwitchPreference android:title="Speaker disconnect workaround" android:key="bluetooth_keepalive_enabled" android:summary="Play a silent audio clip every 5 minutes to prevent bluetooth speakers going to sleep" android:defaultValue="false" app:iconSpaceReserved="false" />
+        <ListPreference android:entries="@array/dark_mode_settings_list" android:title="Themes" android:key="dark_mode" android:defaultValue="1" android:entryValues="@array/dark_mode_settings_id" app:iconSpaceReserved="false" />
+        <Preference android:layout_marginBottom="10.0dip" android:title="Open source licenses" android:key="open_source_licenses" app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+    <Preference android:title="Log out" android:key="button_twitch_logout" app:iconSpaceReserved="false" app:isPreferenceVisible="false" />
+</PreferenceScreen>

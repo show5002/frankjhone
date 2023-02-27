@@ -1,0 +1,124 @@
+0:46 androidx.databinding:databinding-adapters
+48:46 androidx.databinding:databinding-runtime
+96:46 androidx.databinding:databinding-common
+144:46 org.jetbrains:annotations
+192:46 com.google.android.material:material
+240:46 com.takisoft.preferencex:preferencex
+288:46 androidx.preference:preference
+336:42 com.github.mabbas007:TagsEditText
+380:46 com.pes.materialcolorpicker:library
+428:46 androidx.appcompat:appcompat
+476:46 androidx.legacy:legacy-support-v4
+524:46 androidx.viewpager2:viewpager2
+572:46 androidx.recyclerview:recyclerview
+620:47 com.google.android.gms:play-services-oss-licenses
+669:1602 JSR 305
+2273:1732 Protobuf Nano
+4007:680 STL
+4689:11365 absl
+16056:11342 flatbuffers
+27400:11358 safeparcel
+38760:47 com.google.android.gms:play-services-base
+38809:21000 ICU4C
+59811:731 UTF
+60544:46 com.google.firebase:firebase-crashlytics
+60592:11361 Tape
+71955:1735 Protocol Buffers
+73692:47 com.google.firebase:firebase-analytics
+73741:47 com.google.android.gms:play-services-measurement-api
+73790:10694 AndroidX lifecycle common library
+84486:10694 AndroidX lifecycle livedatacore library
+95182:10694 AndroidX lifecycle runtime library
+105878:1096 Animal Sniffer
+106976:1846 Checker Framework Annotations
+108824:11357 Error Prone
+120183:13096 Firebase
+133281:11358 Google Auto
+144641:11358 Guava JDK5
+156001:11362 Guava JDK7
+167365:11358 J2ObjC
+178725:11358 JSR 250
+190085:11307 JsInterop Annotations
+201394:11358 SafeParcelable library
+212754:10695 apksig
+223451:46 com.google.firebase:firebase-installations
+223499:46 com.google.firebase:firebase-common
+223547:46 com.google.firebase:firebase-installations-interop
+223595:47 com.google.android.gms:play-services-tasks
+223644:47 com.google.android.gms:play-services-measurement
+223693:11365 JSR 330
+235060:47 com.google.android.gms:play-services-measurement-sdk
+235109:47 com.google.firebase:firebase-measurement-connector
+235158:47 com.google.android.gms:play-services-measurement-impl
+235207:47 com.google.android.gms:play-services-ads-identifier
+235256:47 com.google.android.gms:play-services-measurement-sdk-api
+235305:47 com.google.android.gms:play-services-measurement-base
+235354:47 com.google.android.gms:play-services-stats
+235403:47 com.google.android.gms:play-services-basement
+235452:46 androidx.fragment:fragment
+235500:46 androidx.legacy:legacy-support-core-ui
+235548:46 androidx.legacy:legacy-support-core-utils
+235596:46 androidx.loader:loader
+235644:46 androidx.appcompat:appcompat-resources
+235692:46 androidx.drawerlayout:drawerlayout
+235740:46 androidx.coordinatorlayout:coordinatorlayout
+235788:46 androidx.transition:transition
+235836:46 androidx.vectordrawable:vectordrawable-animated
+235884:46 androidx.vectordrawable:vectordrawable
+235932:46 androidx.media:media
+235980:46 androidx.viewpager:viewpager
+236028:46 androidx.slidingpanelayout:slidingpanelayout
+236076:46 androidx.customview:customview
+236124:46 androidx.activity:activity
+236172:46 androidx.swiperefreshlayout:swiperefreshlayout
+236220:46 androidx.asynclayoutinflater:asynclayoutinflater
+236268:46 androidx.core:core
+236316:46 androidx.lifecycle:lifecycle-runtime
+236364:46 androidx.lifecycle:lifecycle-livedata
+236412:46 androidx.lifecycle:lifecycle-viewmodel-savedstate
+236460:46 androidx.lifecycle:lifecycle-livedata-core
+236508:0 io.coil-kt:coil
+236510:0 io.coil-kt:coil-gif
+236512:0 io.coil-kt:coil-base
+236514:46 androidx.lifecycle:lifecycle-common-java8
+236562:46 androidx.savedstate:savedstate
+236610:46 androidx.lifecycle:lifecycle-common
+236658:46 com.squareup.picasso:picasso
+236706:46 androidx.versionedparcelable:versionedparcelable
+236754:46 androidx.collection:collection
+236802:46 androidx.cursoradapter:cursoradapter
+236850:46 androidx.cardview:cardview
+236898:46 androidx.exifinterface:exifinterface
+236946:46 com.google.android.datatransport:transport-backend-cct
+236994:46 com.google.android.datatransport:transport-runtime
+237042:46 com.google.android.datatransport:transport-api
+237090:46 com.google.firebase:firebase-components
+237138:46 com.google.firebase:firebase-encoders-json
+237186:46 com.google.firebase:firebase-encoders
+237234:46 androidx.arch.core:core-runtime
+237282:46 androidx.arch.core:core-common
+237330:46 androidx.lifecycle:lifecycle-viewmodel
+237378:46 androidx.documentfile:documentfile
+237426:46 androidx.localbroadcastmanager:localbroadcastmanager
+237474:46 androidx.print:print
+237522:46 androidx.interpolator:interpolator
+237570:46 androidx.annotation:annotation
+237618:46 com.rabtman.wsmanager:wsmanager
+237666:46 com.squareup.okio:okio
+237714:47 org.jetbrains.kotlinx:kotlinx-coroutines-android
+237763:47 org.jetbrains.kotlinx:kotlinx-coroutines-core
+237812:46 org.jetbrains.kotlin:kotlin-stdlib
+237860:46 org.jetbrains.kotlin:kotlin-stdlib-common
+237908:46 androidx.constraintlayout:constraintlayout
+237956:46 androidx.constraintlayout:constraintlayout-solver
+238004:46 androidx.annotation:annotation-experimental
+238052:46 com.fasterxml.jackson.core:jackson-databind
+238100:46 com.fasterxml.jackson.core:jackson-annotations
+238148:46 com.fasterxml.jackson.core:jackson-core
+238196:46 org.greenrobot:eventbus
+238244:47 com.google.dagger:dagger
+238293:46 javax.inject:javax.inject
+238341:46 androidx.core:core-ktx
+238389:46 androidx.collection:collection-ktx
+238437:46 org.jetbrains.kotlin:kotlin-android-extensions-runtime
+238485:121 net.sf.kxml:kxml2
